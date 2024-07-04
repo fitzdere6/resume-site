@@ -17,23 +17,40 @@
         <a href="contact.html">Contact</a>
     </nav>
 </header>
+<div class="theme-toggle">
+    <label class="switch">
+        <input type="checkbox" id="toggle-button">
+        <span class="slider round"></span>
+    </label>
+    <span class="toggle-caption">Toggle Dark/Light Theme</span>
+</div>
 <main>
 <div id="home-grid">
     <div>
-        <h1 class="headings">Hello World!</h1>
-        <p>My name is Derek Fitzgerald. I am currently a cybersecurity major at Brigham Young University in my second semester. I enjoy spending time outdoors with my wife, golfing, camping, casual gaming, and cooking.</p>
+        <h1 class="headings">Introduction:</h1>
+        <p>My name is Derek Fitzgerald, and I am currently pursuing a degree in cybersecurity at Brigham Young University. As I enter my second semester, I am eager to gain practical experience and prepare for a career in this dynamic field.</p>
+        <h1 class="headings">Professional Traits:</h1>
+        <p>I am known for my strong work ethic and collaborative spirit, thriving in team environments while also capable of independent contributions. My skill set includes proficiency in various Microsoft Office applications, particularly Excel and Word. Additionally, I possess foundational knowledge in HTML, CSS, and Javascript coding.</p>
+        <h1 class="headings">Personal Interests:</h1>
+        <p>Beyond my academic pursuits, I enjoy outdoor activities with my wife, including golfing and camping. I also have a passion for casual gaming and cooking, finding joy in both creative and competitive endeavors. In high school, I participated on the golf team, relishing the camaraderie and challenges of team sports.</p>
+        <h1 class="headings">Technical Projects:</h1>
+        <p>During the COVID-19 pandemic, I explored Linux-based programming and successfully built and expanded a Ubuntu server. Initially developed for a Minecraft server, it now serves as a media hub for our collection of movies and TV shows. I continue to enhance and manage this server as a rewarding side project, with plans to host this very webpage on it.</p>
     </div>
     <img src="images/derek-wedding.jpg" alt="Picture of me at my Wedding">
+    <figcaption>Me on my wedding day</figcaption>
 </div>
-<img src="images/derek-mission.jpg" alt="Picture of me at a lake in Snyder, TX">
+<figure id="home-img">
+    <img src="images/derek-mission.jpg" alt="Picture of me at a lake in Snyder, TX">
+    <figcaption>Me in Snyder, TX</figcaption>
+</figure>
 </main>
 <footer>
     <div id="contact-info">
         <h2>Contact Information</h2>
-        <p>(208) 419-9983</p>
-        <p>derkfitz02@gmail.com</p>
+        <p>Phone: (208) 419-9983</p>
+        <p>Email: derkfitz02@gmail.com</p>
     </div>
-    <a href="site-plan.html">Site Plan</a>
+    <a id="site-plan" href="site-plan.html">Site Plan</a>
     <div class="social">
         <a href="https://www.linkedin.com/in/derkfitz02/">
             <img src="images/linkedin.png" alt="Linkedin Logo">
@@ -43,5 +60,6 @@
         </a>
     </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
