@@ -98,34 +98,34 @@ body.dark-mode .headings {
     font-family: "Oswald";
     font-size: 1.8em;
 }
-#home-grid {
+.home-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     padding: 20px;
 }
-#home-grid div{
+.home-grid div{
     grid-column: 1/4;
 }
-#home-grid img{
+.home-grid img{
     grid-column: 4/6;
     width: 100%;
     max-width: 600px;
     margin-bottom: -15px;
 }
-#home-grid #pic-caption {
+.home-grid .pic-caption {
     grid-column: 4/6;
     text-align: center;
     font-size: 0.8em;
     margin-top: 0;
 }
-#home-img img {
+.home-img img {
     display: block;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
-#home-img figcaption {
+.home-img figcaption {
     text-align: center;
     font-size: 0.8em;
 }
