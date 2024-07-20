@@ -93,10 +93,20 @@ nav a:hover::after {
     font-family: "Oswald";
     font-size: 1.8em;
 }
+.subheadings {
+    color: #D40000;
+    font-family: "Oswald";
+    font-size: 1.1em;
+}
 body.dark-mode .headings {
     color: white;
     font-family: "Oswald";
     font-size: 1.8em;
+}
+body.dark-mode .subheadings {
+    color: white;
+    font-family: "Oswald";
+    font-size: 1.1em;
 }
 .home-grid {
     display: grid;
@@ -128,6 +138,41 @@ body.dark-mode .headings {
 .home-img figcaption {
     text-align: center;
     font-size: 0.8em;
+}
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    padding: 20px;
+}
+.work-grid h1 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+.work-grid div {
+    grid-column: 1/7;
+    grid-row: 2/11;
+}
+.work-grid #mission-img {
+    grid-column: 7/10;
+    grid-row: 1/4;
+}
+.work-grid #mission-img img {
+    width: 60%;
+}
+.work-grid #pc-img {
+    grid-column: 7/10;
+    grid-row: 4/8;
+}
+.work-grid #pc-img img {
+    width: 75%;
+}
+.work-grid #sushi-img {
+    grid-column: 7/10;
+    grid-row: 6/11;
+}
+.work-grid #sushi-img img {
+    width: 65%;
 }
 footer {
     background-color: #454545;
