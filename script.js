@@ -1,3 +1,4 @@
+// dark mode
 document.getElementById('toggle-button').addEventListener('change', () => {
     document.body.classList.toggle('dark-mode');
     
@@ -14,4 +15,20 @@ window.addEventListener('load', () => {
         document.body.classList.add('dark-mode');
         document.getElementById('toggle-button').checked = true;
     }
+});
+
+// contact form
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Perform form validation if necessary
+
+        alert('Submitted Successfully!');
+
+        // Optionally, reset the form
+        form.reset();
+    });
 });

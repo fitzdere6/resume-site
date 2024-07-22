@@ -1,4 +1,383 @@
-<h1>Work Experience</h1>
-    <p>While in high school, I worked as a sushi chef at Snow Eagle Brewing and Grill in Idaho Falls. There I learned the basics of food prep and safety. I discovered a love for cooking while I worked there. As my financial situation changed, I went to work as an Easy Tech at Staples in Ammon, ID. There I learned how to interact with customers and help fix computers. I learned how to diagnose issues and find ways to repair them. In August of 2021, I left on a mission for the Church of Jesus Christ of Latter-day Saints to the west Texas and eastern New Mexico areas. There I served in various capacities. I helped people with farm work, home repairs and cleaning, animal shelters, etc. I learned to love the people in that area. When I returned home, I went back to work at Staples in Ammon. As again financial situations changed and payroll cuts at Staples, I went to work at Homestead Assisted Living in Rexburg, ID. I learned the basics in healthcare, such as toileting people, helping people get ready for the day, and assisting with their medications.</p>
-    <img src="images/derek-cadillac-ranch.jpg" alt="Picture of me at Cadillac Ranch in Amarillo, TX">
-    <img src="images/derek-pc.jpg" alt="Picture of the PC I built">
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+body {
+    background-color: white;
+    font-family: "Merriweather", "helvetica", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+header {
+    background-color: #454545;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    height: 150px;
+}
+body.dark-mode header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    height: 150px; 
+}
+#logo-link {
+    position: absolute;
+    left: 10px;
+    padding: 5px;
+}
+.logo {
+    width: 150px;
+    padding-top: 5px;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+nav a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 250px;
+    height: 50px;
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 30px;
+    position: relative;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+body.dark-mode nav a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 250px;
+    height: 50px;
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 30px;
+    position: relative;
+}
+nav a:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+#toggle-button {
+    display: none;
+}
+.headings {
+    color: #D40000;
+    font-family: "Oswald";
+    font-size: 1.8em;
+}
+.subheadings {
+    color: #D40000;
+    font-family: "Oswald";
+    font-size: 1.1em;
+}
+body.dark-mode .headings {
+    color: white;
+    font-family: "Oswald";
+    font-size: 1.8em;
+}
+body.dark-mode .subheadings {
+    color: white;
+    font-family: "Oswald";
+    font-size: 1.1em;
+}
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.home-grid div{
+    grid-column: 1/4;
+}
+.home-grid img{
+    grid-column: 4/6;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: -15px;
+}
+.home-grid .pic-caption {
+    grid-column: 4/6;
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 0;
+}
+.home-img img {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.home-img figcaption {
+    text-align: center;
+    font-size: 0.8em;
+}
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    padding: 20px;
+}
+.work-grid h1 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+.work-grid div {
+    grid-column: 1/7;
+    grid-row: 2/11;
+}
+.work-grid #mission-img {
+    grid-column: 7/10;
+    grid-row: 1/4;
+}
+.work-grid #mission-img img {
+    width: 60%;
+}
+.work-grid #pc-img {
+    grid-column: 7/10;
+    grid-row: 4/8;
+}
+.work-grid #pc-img img {
+    width: 75%;
+}
+.work-grid #sushi-img {
+    grid-column: 7/10;
+    grid-row: 6/11;
+}
+.work-grid #sushi-img img {
+    width: 65%;
+}
+.contact-form {
+    color: #D40000;
+    font-family: "Oswald";
+    font-size: 1.1em;
+    text-align: center;
+}
+body.dark-mode .contact-form {
+    color: white;
+    font-family: "Oswald";
+    font-size: 1.1em;
+    text-align: center;
+}
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+#contactForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#contactForm button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#contactForm button:hover {
+    background-color: #45a049;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode #contactForm {
+    border-color: #444;
+    background-color: #1e1e1e;
+}
+
+body.dark-mode #contactForm label {
+    color: #ffffff;
+}
+
+body.dark-mode #contactForm input[type="text"],
+body.dark-mode #contactForm input[type="email"],
+body.dark-mode #contactForm input[type="tel"],
+body.dark-mode #contactForm textarea {
+    border-color: #555;
+    background-color: #333;
+    color: #ffffff;
+}
+
+body.dark-mode #contactForm button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+body.dark-mode #contactForm button:hover {
+    background-color: #45a049;
+}
+footer {
+    background-color: #454545;
+    color: white;
+    padding: 30px 50px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+body.dark-mode footer {
+    background-color: black;
+    color: white;
+    padding: 30px 50px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+#site-plan {
+    font-family: "Oswald";
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    margin-left: 40px;
+    border: 2px solid black;
+}
+#site-plan:hover {
+    font-family: "Oswald";
+    font-weight: bold;
+    background-color: #646464;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    margin-left: 40px;
+    border: 2px solid black;
+}
+body.dark-mode #site-plan {
+    font-family: "Oswald";
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    margin-left: 40px;
+    border: 2px solid white;
+}
+body.dark-mode #site-plan:hover {
+    font-family: "Oswald";
+    font-weight: bold;
+    background-color: #313131;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    margin-left: 40px;
+    border: 2px solid white;
+}
+#contact-info h2 {
+    font-family: "Oswald";
+    font-size: 1.2em;
+}
+#contact-info p{
+    font-size: 0.8em;
+}
+.social img {
+    width: 60px;
+    padding: 30px;
+}
+
+
+
+/* Toggle Slider */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 10px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 50%;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.toggle-caption {
+    margin-left: 10px;
+    font-size: 16px;
+    font-family: "Merriweather", "helvetica", sans-serif;
+    display: flex;
+    align-items: center;
+}

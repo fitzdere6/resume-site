@@ -14,23 +14,21 @@ body {
 header {
     background-color: #454545;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 20px;
     height: 150px;
 }
 body.dark-mode header {
     background-color: black;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 20px;
     height: 150px; 
 }
 #logo-link {
-    position: absolute;
-    left: 10px;
     padding: 5px;
 }
 .logo {
@@ -43,7 +41,7 @@ nav {
     align-items: center;
     margin: 0 auto;
 }
-nav a{
+nav a {
     display: block;
     color: white;
     text-align: center;
@@ -67,24 +65,14 @@ nav a::after {
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out;
-  }
-body.dark-mode nav a{
-    display: block;
+}
+body.dark-mode nav a {
     color: white;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px 20px;
-    width: 250px;
-    height: 50px;
-    font-family: "Oswald";
-    font-weight: bold;
-    font-size: 30px;
-    position: relative;
 }
 nav a:hover::after {
     visibility: visible;
     transform: scaleX(1);
-  }
+}
 #toggle-button {
     display: none;
 }
@@ -100,13 +88,9 @@ nav a:hover::after {
 }
 body.dark-mode .headings {
     color: white;
-    font-family: "Oswald";
-    font-size: 1.8em;
 }
 body.dark-mode .subheadings {
     color: white;
-    font-family: "Oswald";
-    font-size: 1.1em;
 }
 .home-grid {
     display: grid;
@@ -114,20 +98,22 @@ body.dark-mode .subheadings {
     gap: 20px;
     padding: 20px;
 }
-.home-grid div{
+.home-grid div {
     grid-column: 1/4;
 }
-.home-grid img{
+.home-grid figure {
     grid-column: 4/6;
+    margin: 0;
+}
+.home-grid img {
     width: 100%;
     max-width: 600px;
     margin-bottom: -15px;
 }
-.home-grid .pic-caption {
-    grid-column: 4/6;
+.home-grid figcaption {
     text-align: center;
     font-size: 0.8em;
-    margin-top: 0;
+    margin-top: 10px;
 }
 .home-img img {
     display: block;
@@ -174,6 +160,75 @@ body.dark-mode .subheadings {
 .work-grid #sushi-img img {
     width: 65%;
 }
+.contact-form {
+    color: #D40000;
+    font-family: "Oswald";
+    font-size: 1.1em;
+    text-align: center;
+}
+body.dark-mode .contact-form {
+    color: white;
+}
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+#contactForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#contactForm button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#contactForm button:hover {
+    background-color: #45a049;
+}
+body.dark-mode #contactForm {
+    border-color: #444;
+    background-color: #1e1e1e;
+}
+body.dark-mode #contactForm label {
+    color: #ffffff;
+}
+body.dark-mode #contactForm input[type="text"],
+body.dark-mode #contactForm input[type="email"],
+body.dark-mode #contactForm input[type="tel"],
+body.dark-mode #contactForm textarea {
+    border-color: #555;
+    background-color: #333;
+    color: #ffffff;
+}
+body.dark-mode #contactForm button {
+    background-color: #4CAF50;
+    color: white;
+}
+body.dark-mode #contactForm button:hover {
+    background-color: #45a049;
+}
 footer {
     background-color: #454545;
     color: white;
@@ -185,12 +240,6 @@ footer {
 }
 body.dark-mode footer {
     background-color: black;
-    color: white;
-    padding: 30px 50px;
-    margin-top: 150px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
 }
 #site-plan {
     font-family: "Oswald";
@@ -202,48 +251,25 @@ body.dark-mode footer {
     border: 2px solid black;
 }
 #site-plan:hover {
-    font-family: "Oswald";
-    font-weight: bold;
     background-color: #646464;
-    text-decoration: none;
-    color: white;
-    padding: 15px;
-    margin-left: 40px;
-    border: 2px solid black;
 }
 body.dark-mode #site-plan {
-    font-family: "Oswald";
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    padding: 15px;
-    margin-left: 40px;
     border: 2px solid white;
 }
 body.dark-mode #site-plan:hover {
-    font-family: "Oswald";
-    font-weight: bold;
     background-color: #313131;
-    text-decoration: none;
-    color: white;
-    padding: 15px;
-    margin-left: 40px;
-    border: 2px solid white;
 }
 #contact-info h2 {
     font-family: "Oswald";
     font-size: 1.2em;
 }
-#contact-info p{
+#contact-info p {
     font-size: 0.8em;
 }
 .social img {
     width: 60px;
     padding: 30px;
 }
-
-
-
 /* Toggle Slider */
 .theme-toggle {
     display: flex;
@@ -299,4 +325,45 @@ input:checked + .slider:before {
     font-family: "Merriweather", "helvetica", sans-serif;
     display: flex;
     align-items: center;
+}
+
+/* Media query for screens with width of 900px or less */
+@media screen and (max-width: 900px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #454545;
+    }
+
+    nav a {
+        padding: 15px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid white; /* Optional: to separate the menu items */
+    }
+
+    .home-grid,
+    .work-grid {
+        display: block;
+        padding: 10px;
+    }
+
+    .home-grid img,
+    .work-grid img {
+        width: 100%;
+    }
+
+    .work-grid h1 {
+        grid-column: auto;
+    }
+
+    .contact-form {
+        padding: 10px;
+    }
 }
